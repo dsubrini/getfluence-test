@@ -3,7 +3,7 @@ import React from 'react';
 import './MainContainer.css';
 
 interface MainContainerProps {
-  children: JSX.Element;
+  children: JSX.Element | JSX.Element[];
 }
 
 export const MainContainer: React.FC<MainContainerProps> = ({ children }) => {
