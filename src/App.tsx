@@ -7,14 +7,16 @@ import { Navigation } from './components/UI/organisms/Navigation';
 
 function App() {
   return (
-    <div className="App">
+    <main className="App">
       <Navigation />
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/profil" element={<Profil />} />
-        <Route path="/calendar" element={<Calendar />} />
-      </Routes>
-    </div>
+      <div className="wrapper">
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/profil" element={<Profil />} />
+          <Route path="/calendar" element={<Calendar />} />
+        </Routes>
+      </div>
+    </main>
   );
 }
 
