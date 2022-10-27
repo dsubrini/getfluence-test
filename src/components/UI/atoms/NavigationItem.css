@@ -1,0 +1,16 @@
+.navigation__list--item {
+  list-style-type: none;
+}
+
+.navigation__list--item a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  padding: 0.5rem;
+}
+
+.navigation__list--item a:hover {
+  background-color: white;
+  color: var(--main-blue-color);
+  border-radius: 5px;
+}

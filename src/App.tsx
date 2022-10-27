@@ -1,4 +1,4 @@
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Calendar } from './components/pages/Calendar';
 import { Login } from './components/pages/Login';
@@ -9,11 +9,11 @@ function App() {
   return (
     <div className="App">
       <Navigation />
-      <Switch>
-        <Route exact path="/" component={Login} />
-        <Route exact path="/profil" component={Profil} />
-        <Route exact path="/calendar" component={Calendar} />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/profil" element={<Profil />} />
+        <Route path="/calendar" element={<Calendar />} />
+      </Routes>
     </div>
   );
 }
