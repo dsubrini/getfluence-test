@@ -3,11 +3,15 @@ import { Button } from '../atoms/Button';
 import { Form } from '../atoms/Form/Form';
 import { FormInput } from '../atoms/Form/FormInput';
 
-interface FormContainerProps {}
+interface FormContainerProps {
+  submitFunction: (event: React.FormEvent<HTMLFormElement>) => void;
+}
 
-export const FormContainer: React.FC<FormContainerProps> = ({}) => {
+export const FormContainer: React.FC<FormContainerProps> = ({
+  submitFunction,
+}) => {
   return (
-    <Form>
+    <Form submitFunction={submitFunction}>
       <FormInput type="email" placeholder="Email" required />
       <FormInput type="password" placeholder="Mot de passe" required />
       <Button type="submit" text="Se connecter" color="blue" />

@@ -16,6 +16,7 @@ export const FormInput: React.FC<FormInputProps> = ({
   return (
     <input
       type={type}
+      name={type}
       placeholder={placeholder}
       className="form__input"
       required={required}
