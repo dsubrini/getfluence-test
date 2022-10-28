@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { UserContext } from '../../../context/userContext';
+import { User, UserContext } from '../../../context/userContext';
 import { MainContainer } from '../atoms/MainContainer';
 import { MainTitleContainer } from '../atoms/MainContainerTitle';
-import { FormContainer } from '../molecules/FormContainer';
+import { LoginForm } from '../molecules/LoginForm';
 
-interface LoginFormProps {}
+interface LoginFormContainerProps {}
 
-export const LoginForm: React.FC<LoginFormProps> = () => {
+export const LoginFormContainer: React.FC<LoginFormContainerProps> = () => {
   const { user, setUser } = useContext(UserContext);
   const navigate = useNavigate();
 
@@ -17,7 +17,8 @@ export const LoginForm: React.FC<LoginFormProps> = () => {
     const passwordValue = event.currentTarget.password.value;
     if (emailValue === user!.email && passwordValue === user!.password) {
       setUser((prevstate) => {
-        return { ...prevstate, isLogged: true };
+        const merge: Partial<User> = { isLogged: true };
+        return { ...prevstate, ...merge };
       });
       return navigate('/profil');
     }
@@ -25,7 +26,7 @@ export const LoginForm: React.FC<LoginFormProps> = () => {
   return (
     <MainContainer>
       <MainTitleContainer title="Connexion" />
-      <FormContainer submitFunction={handleLoginSubmit} />
+      <LoginForm submitFunction={handleLoginSubmit} />
     </MainContainer>
   );
 };
