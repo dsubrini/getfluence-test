@@ -27,7 +27,7 @@ export const ProfilFormContainer: React.FC<ProfilFormContainerProps> = () => {
 
   return (
     <MainContainer>
-      <MainTitleContainer title="Profil" />
+      <MainTitleContainer title={`Profil de ${user?.email}`} />
       <ProfilForm submitFunction={handleProfilSubmit} />
     </MainContainer>
   );
