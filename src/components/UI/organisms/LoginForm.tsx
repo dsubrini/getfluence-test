@@ -8,7 +8,7 @@ import { FormContainer } from '../molecules/FormContainer';
 interface LoginFormProps {}
 
 export const LoginForm: React.FC<LoginFormProps> = () => {
-  const { user } = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
   const navigate = useNavigate();
 
   const handleLoginSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -16,6 +16,9 @@ export const LoginForm: React.FC<LoginFormProps> = () => {
     const emailValue = event.currentTarget.email.value;
     const passwordValue = event.currentTarget.password.value;
     if (emailValue === user!.email && passwordValue === user!.password) {
+      setUser((prevstate) => {
+        return { ...prevstate, isLogged: true };
+      });
       return navigate('/profil');
     }
   };
