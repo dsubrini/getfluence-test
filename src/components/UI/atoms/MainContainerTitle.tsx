@@ -7,5 +7,5 @@ interface MainTitleContainerProps {
 export const MainTitleContainer: React.FC<MainTitleContainerProps> = ({
   title,
 }) => {
-  return <h3 className="main__container--title">{title}</h3>;
+  return <h3>{title}</h3>;
 };

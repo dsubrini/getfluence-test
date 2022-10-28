@@ -1,0 +1,31 @@
+.calendar-weeks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.calendar-weeks__cell {
+  height: 30px;
+  width: 30px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ba4b4;
+}
+
+.calendar-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.calendar-content__cell {
+  height: 30px;
+  width: 30px;
+  margin: 2px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,29 @@
+.cell {
+  height: 40px;
+  width: 40px;
+  margin: 2px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-week {
+  color: var(--second-gray-color);
+}
+
+.default {
+  color: #1b1b2f;
+}
+
+.today {
+  background-color: #e4e7ec;
+}
+
+.previousMonth {
+  color: #dae1e7;
+}
+
+.nextMonth {
+  visibility: hidden;
+}

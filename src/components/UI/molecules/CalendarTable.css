@@ -1,0 +1,23 @@
+.calendar__container {
+  width: 400px;
+  margin-top: 1rem;
+}
+
+.calendar__title {
+  color: var(--main-blue-color);
+  text-transform: capitalize;
+}
+
+.calendar__arrows {
+  display: flex;
+  gap: 1rem;
+  color: var(--second-gray-color);
+}
+
+.calendar__arrows > svg {
+  cursor: pointer;
+}
+
+.calendar__arrows > svg:hover {
+  transform: scale(1.1);
+}
