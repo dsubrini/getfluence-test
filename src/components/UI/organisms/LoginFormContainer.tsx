@@ -17,7 +17,11 @@ export const LoginFormContainer: React.FC<LoginFormContainerProps> = () => {
     const passwordValue = event.currentTarget.password.value;
     if (emailValue === user!.email && passwordValue === user!.password) {
       setUser((prevstate) => {
-        const merge: Partial<User> = { isLogged: true };
+        const merge: Partial<User> = {
+          isLogged: true,
+          token:
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwiZW1haWwiOiJ0ZXN0QHRlc3QuZnIiLCJpYXQiOjE3MTExMzkwMjJ9.p4H3fFSQVvZh38_YUfki9UfEv_JerHOsgzs0a6RSHeI',
+        };
         return { ...prevstate, ...merge };
       });
       return navigate('/profil');

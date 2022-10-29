@@ -8,9 +8,9 @@ interface NavigationListItemsProps {}
 export const NavigationListItems: React.FC<NavigationListItemsProps> = () => {
   return (
     <ul className="navigation__list">
-      <NavigationItem name="accueil" url="/" />
+      <NavigationItem name="connexion" url="/" />
       <NavigationItem name="profil" url="/profil" />
-      <NavigationItem name="calendar" url="/calendar" />
+      <NavigationItem name="calendrier" url="/calendar" />
     </ul>
   );
 };

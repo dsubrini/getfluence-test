@@ -4,6 +4,7 @@ export interface User {
   email: string;
   password: string;
   isLogged: boolean;
+  token?: string;
   city?: string;
 }
 

@@ -8,3 +8,7 @@
   border: 2px solid var(--main-gray-color);
   background-color: var(--main-gray-color);
 }
+
+.form__input:focus {
+  outline-color: var(--main-blue-color);
+}

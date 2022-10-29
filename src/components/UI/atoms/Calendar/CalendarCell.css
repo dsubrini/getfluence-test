@@ -15,6 +15,7 @@
 
 .calendar-week {
   color: var(--second-gray-color);
+  text-transform: uppercase;
 }
 
 .default {

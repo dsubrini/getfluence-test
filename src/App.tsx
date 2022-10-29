@@ -13,7 +13,7 @@ function App() {
   const [user, setUser] = useState({
     email: 'test@test.fr',
     password: 'test',
-    isLogged: true,
+    isLogged: false,
   });
   return (
     <main className="App">

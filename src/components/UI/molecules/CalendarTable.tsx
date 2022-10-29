@@ -84,7 +84,7 @@ export const CalendarTable: React.FC<CalendarTableProps> = ({}) => {
             initialDate={initialDate}
             currentDay={currentDay}
           >
-            {dayjs(day).format('dd').substring(0, 1)}
+            {dayjs(day).locale('fr').format('dd').substring(0, 1)}
           </CalendarCell>
         ))}
       </CalendarFlex>
