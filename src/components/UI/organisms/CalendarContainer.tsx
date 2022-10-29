@@ -4,14 +4,19 @@ import './Calendar.css';
 import { MainContainer } from '../atoms/MainContainer';
 import { CalendarTable } from '../molecules/CalendarTable';
 import { MainTitleContainer } from '../atoms/MainContainerTitle';
+import { Button } from '../atoms/Button';
 
 interface CalendarContainerProps {}
 
 export const CalendarContainer: React.FC<CalendarContainerProps> = () => {
   return (
     <MainContainer>
-      <MainTitleContainer title="Programmer une réponse" />
+      <MainTitleContainer title="Planifier une réponse" />
       <CalendarTable />
+      <div className="calendar__buttons">
+        <Button type="button" text="Planifier" color="blue" />
+        <Button type="button" text="Annuler" color="white" />
+      </div>
     </MainContainer>
   );
 };

@@ -1,9 +1,10 @@
 .form__input {
   display: block;
   margin: 1rem 0;
-  width: 200px;
+  width: 150px;
   height: 2rem;
   border-radius: 5px;
   padding: 1rem;
   border: 2px solid var(--main-gray-color);
+  background-color: var(--main-gray-color);
 }

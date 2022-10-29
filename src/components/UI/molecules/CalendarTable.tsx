@@ -6,6 +6,7 @@ import { CalendarFlex } from '../atoms/Calendar/CalendarFlex';
 
 import 'dayjs/locale/fr';
 import './CalendarTable.css';
+import { FormInput } from '../atoms/Form/FormInput';
 
 interface CalendarTableProps {}
 
@@ -51,6 +52,15 @@ export const CalendarTable: React.FC<CalendarTableProps> = ({}) => {
 
   return (
     <div className="calendar__container">
+      <div className="calendar__day-input">
+        <label>Date</label>
+        <FormInput
+          type="text"
+          placeholder="Date"
+          name="date"
+          dateValue={dayjs().format('DD/MM/YYYY')}
+        />
+      </div>
       <CalendarFlex>
         <h3 className="calendar__title">
           {initialDate.clone().locale('fr').format('MMMM YYYY')}

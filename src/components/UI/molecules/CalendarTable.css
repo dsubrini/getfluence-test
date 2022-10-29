@@ -3,9 +3,19 @@
   margin-top: 1rem;
 }
 
+.calendar__day-input {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  color: var(--second-gray-color);
+}
+
 .calendar__title {
   color: var(--main-blue-color);
   text-transform: capitalize;
+  padding-left: 1rem;
+  margin: 1rem 0;
 }
 
 .calendar__arrows {
