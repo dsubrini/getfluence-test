@@ -13,6 +13,13 @@ Installation du projet avec npm
   npm run dev
 ```
 
+Email et mot de passe pour authentification
+
+```bash
+  email : test@test.fr
+  password : test
+```
+
 ## Outils/Librairies
 
 - Vite
